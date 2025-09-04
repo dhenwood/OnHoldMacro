@@ -13,7 +13,7 @@ function turnOnHoldState(){
 function turnOffHoldState(){
   xapi.Config.UserInterface.LedControl.Mode.set("Auto");
   xapi.Command.UserInterface.Branding.Delete({ Type: "SchedulerBackground" });
-  xapi.Command.UserInterface.Translation.Override.Set({}, '{"version": 1, "translations": [{"sourceText": "On Hold", "translated": "Available", "language": "English"}]}');
+  xapi.Command.UserInterface.Translation.Override.Clear();
   xapi.Command.UserInterface.Message.Prompt.Clear();
 }
 
